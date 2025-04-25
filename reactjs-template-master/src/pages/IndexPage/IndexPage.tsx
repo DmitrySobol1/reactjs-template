@@ -1,5 +1,5 @@
-import { Section, Cell, Image, List, Modal, Button, Placeholder  } from '@telegram-apps/telegram-ui';
-import type { FC, useState } from 'react';
+import { Section, Cell, Image, List, Modal, Button, Placeholder, Select  } from '@telegram-apps/telegram-ui';
+import type { FC } from 'react';
 
 import { Link } from '@/components/Link/Link.tsx';
 import { Page } from '@/components/Page.tsx';
@@ -52,6 +52,15 @@ export const IndexPage: FC = () => {
   </Placeholder>
 </Modal>
         
+          </Section>
+
+
+          <Section>
+          <Select header="Select" placeholder="I am usual input, just leave me alone">
+        <option>One</option>
+        <option>Two</option>
+      </Select>
+
           </Section>
 
 

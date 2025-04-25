@@ -1,12 +1,17 @@
-import { Section, Cell, Image, List } from '@telegram-apps/telegram-ui';
-import type { FC } from 'react';
+import { Section, Cell, Image, List, Modal, Button, Placeholder  } from '@telegram-apps/telegram-ui';
+import type { FC, useState } from 'react';
 
 import { Link } from '@/components/Link/Link.tsx';
 import { Page } from '@/components/Page.tsx';
 
 import tonSvg from './ton.svg';
 
+
+
 export const IndexPage: FC = () => {
+
+ 
+
   return (
     <Page back={false}>
       <List>
@@ -20,24 +25,39 @@ export const IndexPage: FC = () => {
               subtitle="Connect your TON wallet"
             >
               TON Connect
+              
             </Cell>
           </Link>
         </Section>
-        <Section
-          header="Application Launch Data"
-          footer="These pages help developer to learn more about current launch information"
-        >
-          <Link to="/init-data">
-            <Cell subtitle="User data, chat information, technical data">Init Data</Cell>
-          </Link>
-          <Link to="/launch-params">
-            <Cell subtitle="Platform identifier, Mini Apps version, etc.">Launch Parameters</Cell>
-          </Link>
-          <Link to="/theme-params">
-            <Cell subtitle="Telegram application palette information">Theme Parameters</Cell>
-          </Link>
-        </Section>
+
+        <Section>
+
+        <Modal
+  
+  trigger={<Button size="m">Open modal</Button>}
+>
+  <Placeholder
+    description="Description"
+    header="Title"
+  >
+    <img
+      alt="Telegram sticker"
+      src="https://xelene.me/telegram.gif"
+      style={{
+        display: 'block',
+        height: '144px',
+        width: '144px'
+      }}
+    />
+  </Placeholder>
+</Modal>
+        
+          </Section>
+
+
       </List>
     </Page>
   );
 };
+
+
